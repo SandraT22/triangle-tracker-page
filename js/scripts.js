@@ -7,9 +7,9 @@ $(document).ready(function() {
 
     if (number1 === number2 && number1 === number3) {
       $("#equilateral").show();
-    } else if (number1 === number2 && number1 !== number3 && number1 + number2 > number3) {
+    } else if (number1 === number2 && number1 !== number3 || numner2 === number1 && number2 !== number3 || number3 === number1 && number3 !== number2) {
       $("#isosceles").show(); 
-    } else if (number1 !== number2 && number1 !==number3 && number2 !== number3 && number1 + number2 > number3 || number2 + number3 > number1 || number1 + number3 > number2) {
+    } else if (number1 !== number2 && number1 === number3 || number2 !== number3 && number2 === number1 || number3 !== number1 && number3 === number2) {
       $("#scalene").show();
     } else {
       $("#notATriangle").show();
@@ -17,6 +17,18 @@ $(document).ready(function() {
   });
   $(".clickable").click(function() {
     $("#equilateral-show").toggle();
-    $("#equilateral-hidden").toggle();
+    $("#triangle-hidden").toggle();
+  })
+  $(".clickable").click(function() {
+    $("#isosceles-show").toggle();
+    $("#triangle-hidden").toggle();
+  })
+  $(".clickable").click(function() {
+    $("#scalene-show").toggle();
+    $("#triangle-hidden").toggle();
+  })
+  $(".clickable").click(function() {
+    $("#notATriangle-show").toggle();
+    $("#triangle-hidden").toggle();
   })
 });
