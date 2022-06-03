@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("form#calculator").submit(function(event) {
+  $("form#triangle").submit(function(event) {
     event.preventDefault();
     const number1 = parseInt($("#input1").val());
     const number2 = parseInt($("#input2").val());
@@ -16,4 +16,3 @@ $(document).ready(function() {
       }
   });
 });
-// I'm here!
