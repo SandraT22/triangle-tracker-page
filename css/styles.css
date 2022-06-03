@@ -1,3 +1,8 @@
 #equilateral, #isosceles, #scalene, #notATriangle {
   display: none;
 }
+.clickable {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}

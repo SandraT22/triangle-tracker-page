@@ -15,4 +15,8 @@ $(document).ready(function() {
       $("#notATriangle").show();
       }
   });
+  $(".clickable").click(function() {
+    $("#equilateral-show").toggle();
+    $("#equilateral-hidden").toggle();
+  })
 });
